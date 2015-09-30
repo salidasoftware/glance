@@ -1,0 +1,23 @@
+{
+  "name": "glance",
+  "version": "1.0.0",
+  "description": "Tool for quickly reviewing your site for style issues.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/salidasoftware/glance.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/salidasoftware/glance/issues"
+  },
+  "homepage": "https://github.com/salidasoftware/glance",
+  "dependencies": {
+    "phantom": "^0.8.0",
+    "phantomjs": "^1.9.18"
+  }
+}
