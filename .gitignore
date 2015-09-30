@@ -1,3 +1,8 @@
+# Image Capture Directory
+capture/*
+output.html
+output.pdf
+
 # Logs
 logs
 *.log

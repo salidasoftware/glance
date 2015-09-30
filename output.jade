@@ -1,0 +1,16 @@
+doctype html
+html(lang="en")
+  head
+    title Glance
+  style.
+    img {
+      max-width: 100%;
+    }
+  body
+    h1 Glance
+    each capture in captures
+      h2= capture.title
+      div
+        a(href=capture.url)= capture.url
+      div
+        img(src=capture.filename)
