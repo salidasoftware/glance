@@ -1,6 +1,6 @@
 {
   "name": "glance2pdf",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tool for quickly reviewing your site for style issues.",
   "main": "glance2pdf.js",
   "repository": {

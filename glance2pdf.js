@@ -8,7 +8,7 @@ var moment = require('moment');
 //http://www.horsemanjs.org/
 var Horseman = require('node-horseman');
 
-var glance = {
+var glance2pdf = {
 	
 	settings: {
 		ua: 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
@@ -173,25 +173,20 @@ var glance = {
 			});
 			
 			Promise.all(promises).then(function(titles){
-				console.log(JSON.stringify(titles));
 				
 				var captures = [];
 				for(var i = 0; i < urls.length; i++) {
 					captures.push({
 						url: urls[i],
 						title: titles[i],
-						filename: i+'.png'
+						filename: process.cwd()+"/"+i+'.png'
 					});
 				}
 				
 				// Generate and store the html output
-				var html_filename = "output.html";
-				var html = jade.renderFile('output.jade', {captures: captures, title: 'Glance : '+moment().format('MMMM Do YYYY, h:mm:ss a')});
-				fs.writeFile(html_filename, html, function(err) {
-					if(err) {
-						return console.log(err);
-					}
-				});
+                var html_filename = process.cwd()+"/output.html";
+				var html = jade.renderFile(__dirname+'/output.jade', {base_url: __dirname, captures: captures, title: 'glance2pdf : '+moment().format('MMMM Do YYYY, h:mm:ss a')});
+                fs.writeFileSync(html_filename, html);
 				
 				// Convert the html output to pdf
 				var horseman = new Horseman();
@@ -222,4 +217,4 @@ var glance = {
 	}
 };
 
-module.exports = glance;
+module.exports = glance2pdf;
