@@ -14,9 +14,11 @@
   },
   "homepage": "https://github.com/salidasoftware/glance",
   "dependencies": {
+    "foundation-sites": "^5.5.3",
     "jade": "^1.11.0",
-    "phantom": "^0.8.0",
-    "phantomjs": "^1.9.18",
-    "promise": "^7.0.4"
+    "moment": "^2.10.6",
+    "node-horseman": "^2.8.1",
+    "promise": "^7.0.4",
+    "underscore": "^1.8.3"
   }
 }

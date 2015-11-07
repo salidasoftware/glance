@@ -2,6 +2,7 @@
 capture/*
 output.html
 output.pdf
+/*.png
 
 # Logs
 logs

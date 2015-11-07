@@ -1,16 +1,18 @@
 doctype html
 html(lang="en")
   head
-    title Glance
-  style.
-    img {
-      max-width: 100%;
-    }
+    title= title
+    link(rel='stylesheet', href='node_modules/foundation-sites/css/foundation.css')
+    script(src='node_modules/foundation-sites/js/vendor/jquery.js')
+    script(src='node_modules/foundation-sites/js/foundation.js')
   body
-    h1 Glance
-    each capture in captures
-      h2= capture.title
-      div
-        a(href=capture.url)= capture.url
-      div
-        img(src=capture.filename)
+    div.row
+      div.large-12.columns
+        h1= title
+        each capture in captures
+          hr
+          h2= capture.title
+          div
+            span.label= capture.url
+          div
+            img(src=capture.filename)
